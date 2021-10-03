@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: kuboard
+  name: kuboard-ingress
   namespace: kube-system
   annotations:
     k8s.kuboard.cn/displayName: kuboard
