@@ -25,8 +25,7 @@ spec:
     spec:
       containers:
       - name: kuboard
-        # image: eipwork/kuboard:latest
-        image: entropypool/kuboard:latest
+        image: eipwork/kuboard:latest
         imagePullPolicy: Always
       tolerations:
       - key: node-role.kubernetes.io/master

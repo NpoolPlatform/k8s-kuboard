@@ -11,10 +11,10 @@ metadata:
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
 spec:
   rules:
-  - host: internal-devops.npool.top
+  - host: kuboard.internal-devops.npool.top
     http:
       paths:
-      - path: /kuboard
+      - path: /
         backend:
           serviceName: kuboard
           servicePort: http
