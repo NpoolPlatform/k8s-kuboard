@@ -1,0 +1,7 @@
+commonLabels:
+  # app: traefik-ingress
+
+resources:
+- 01-kuboard.yaml
+- 02-metrics-server.yaml
+- 03-ingress.yaml
