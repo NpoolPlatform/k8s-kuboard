@@ -1,5 +1,5 @@
 commonLabels:
-  # app: traefik-ingress
+  # app: kuboard-service
 
 resources:
 - 01-kuboard.yaml
