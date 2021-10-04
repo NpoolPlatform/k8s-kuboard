@@ -12,7 +12,7 @@ metadata:
     kubernetes.io/ingress.class: "devops-vpn-nginx-internal"
 spec:
   rules:
-  - host: kuboard.internal-devops.npool.top
+  - host: kuboard.internal-devops.development.npool.top
     http:
       paths:
       - path: /

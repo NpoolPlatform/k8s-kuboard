@@ -7,18 +7,15 @@ pipeline {
       }
     }
 
-    stage('Build traefik') {
+    stage('Deploy to target') {
+      when {
+        expression { DEPLOY_TARGET == 'true' }
+      }
       steps {
-        sh(returnStdout: true, script: '''#!/bin/sh
-          sh 'docker images | grep "entropypool/kuboard"'
-          if [ 0 -eq $? ]; then
-            sh 'docker rmi entropypool/kuboard:latest'
-          fi
-        '''.stripIndent())
-        sh 'docker build -t entropypool/kuboard:latest .'
+        sh 'sed -i "s/kuboard.internal-devops.development.npool.top/kuboard.internal-devops.$TARGET_ENV.npool.top/g" 03-ingress.yaml'
+        sh 'kubectl apply -k .'
       }
     }
-
   }
   post('Report') {
     fixed {
