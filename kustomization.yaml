@@ -4,4 +4,4 @@ commonLabels:
 resources:
 - 01-kuboard.yaml
 - 02-metrics-server.yaml
-- 03-ingress.yaml
+- 03-traefik-vpn-ingress.yaml
